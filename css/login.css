@@ -1,0 +1,467 @@
+@charset "UTF-8";
+
+/* reset */
+*{
+    padding: 0;
+    margin: 0;
+    color: #333;
+    font-family: '맑은 고딕','돋움';
+    box-sizing: border-box;
+}
+ul,li{
+    list-style: none;
+}
+a{
+    text-decoration: none;
+}
+
+.inner{
+    width: 1200px;
+    height: 100%;
+    margin: 0 auto;
+    position: relative;
+}
+.clearfix::after{
+    content: "";
+    display: block;
+    clear: both;
+}
+
+/* header */
+.headerContainer{
+    width: 100%;
+    height: 150px;
+}
+.hTop{
+    width: 100%;
+    height: 90px;
+    position: relative;
+    border-bottom: solid 1px #ddd;
+}
+.logo{
+    width: 212px;/*163px*/
+    height: 26px;/*20px*/
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+}
+.logo img{
+    position: absolute;
+    height: 100%;
+}
+
+.search{
+    width: 500px;
+    height: 50%; /*45px*/
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+.search > input:first-child{
+    width: 430px;
+    height: 90%;
+    border: solid 3px #2892d8;
+    border-radius: 20px;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    padding: 5px 15px;
+    font-size: 15px;
+}
+.search > div{
+    width: 66px;
+    height: 90%;
+    border: solid 1px #2892d8;
+    border-radius: 20px;
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    background: #2892d8;
+    font-size: 0;
+    /* background-image: url("../images/search.png") no-repeat center center/100%; */
+    cursor: pointer;
+}
+.search > div > img{
+    width: 38%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+
+.icon{
+    width: 70px;
+    height: 35px;
+    position: absolute;
+    top: 57%;
+    transform: translateY(-50%);
+    right: 22.5%;
+}
+.icon > a:first-child{
+    width: 50%;
+    height: 35px;
+    display: inline;
+    /* line-height: 35px; */
+    float: left;
+}
+.icon > a:first-child > img{
+    width: 100%;
+}
+.icon > a:last-child{
+    width: 50%;
+    height: 35px;
+    display: inline;
+    float: left;
+}
+.icon > a:last-child > img{
+    width: 80%;
+    margin-top: 3px;
+    margin-left: 3px;
+}
+
+.slogan{
+    width: 161px;/*316px*//*161px*/
+    height: 80%;/*56%*//*80%*/
+    position: absolute;
+    top: 50%;
+    right: 0;
+    transform: translateY(-50%);
+}
+.slogan img{
+    height: 100%;
+}
+
+.hBottom{
+    width: 100%;
+    height: 60px;
+    position: relative;
+    border-bottom: solid 1px #46679d;
+    z-index: 5;
+}
+
+.gnb{
+    width: 95%;
+    height: 100%;/*330px*//*420px*/
+    position: absolute;
+}
+.mainMenu{
+    width: 100%;
+    height: 100%;
+}
+.mainMenu > li{
+    width: 14%;
+    height: 100%;
+    float: left;
+    position: relative;
+}
+.mainMenu > li > a{
+    display: block;
+    line-height: 60px;
+    text-align: center;
+    font-size: 18px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+.mainMenu > li:hover > a{
+    color: #2892d8;
+}
+
+.subMenu{
+    width: 100%;
+    height: 360px;
+    position: absolute;
+}
+.subMenu > li{
+    width: 100%;
+    height: 11%;
+}
+.subMenu > li > a{
+    display: block;
+    line-height: 40px;
+    text-align: center;
+    font-size: 14px;
+    transition: 0.3s;
+    font-weight: bold;
+}
+.subMenu > li:hover > a{
+    /* color: #2892d8; */
+    color: #fff;
+}
+
+.siteMap{
+    width: 5%;
+    height: 100%;
+    position: absolute;
+    right: 0;
+}
+.siteMapBtn{
+    width: 100%;
+    height: 100%;
+}
+.siteMapBtn > img{
+    width: 45%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+
+.gnbBg{
+    width: 100%;
+    height: 400px;
+    background: #71bff3; /*eee*/
+}
+
+/* loginContainer */
+.loginContainer{
+    width: 100%;
+    height: 700px;
+}
+
+.loginTop{
+    width: 100%;
+    height: 150px;
+}
+.loginTop > li{
+    width: 100%;
+    height: 50%;
+}
+.loginTop > li:first-child{
+    padding-left: 16px;
+    padding-top: 30px;
+}
+.loginTop > li:first-child > a{
+    width: 25px;
+    height: 25px;
+    display: block;
+    float: left;
+}
+.loginTop > li:first-child > a > img{
+    width: 100%;
+}
+.loginTop > li:first-child > h2{
+    display: block;
+    float: left;
+    padding-left: 11px;
+    font-size: 18px;
+}
+
+.loginTop > li:last-child{
+    padding-left: 150px;
+    padding-top: 5px;
+}
+.loginTop > li:last-child > img{
+    width: 52px;
+    display: block;
+    float: left;
+    padding-top: px;
+}
+.loginTop > li:last-child > p{
+    display: block;
+    float: left;
+    font-size: 26px;
+    font-weight: bold;
+    line-height: 70px;
+    margin-left: 12px;
+}
+
+.loginBox{
+    width: 935px;
+    height: 400px;
+    margin: 0 auto;
+    border: solid 1px #ccc;
+    padding: 100px 240px;
+    position: relative;
+}
+
+.id{
+    width: 452px;
+    height: 55px;
+    margin-bottom: 18px;
+    padding: 10px 20px;
+    font-size: 15px;
+    border: solid 1px #bbb;
+}
+.pw{
+    width: 452px;
+    height: 55px;
+    margin-bottom: 18px;
+    padding: 10px 20px;
+    font-size: 15px;
+    border: solid 1px #bbb;
+}
+.join{
+    width: 142px;
+    height: 52px;
+    float: left;
+    background: #bbb;
+    color: #555;
+    border: none;
+    font-size: 15px;
+    cursor: pointer;
+}
+.login{
+    width: 292px;
+    height: 52px;
+    float: right;
+    background: #2892d8;
+    color: #fff;
+    border: none;
+    font-size: 17px;
+    cursor: pointer;
+}
+
+.idPw{
+    position: absolute;
+    bottom: 68px;
+    right: 283px;
+    
+}
+.idPw > li{
+    float: left;
+}
+.idPw > li > a{
+    display: block;
+    font-size: 14px;
+    color: #888;
+    padding: 0 10px;
+    position: relative;
+}
+
+.idPw > li:last-child:after{
+    content: "";
+    display: inline-block;
+    position: absolute;
+    top: 52%;
+    transform: translateY(-50%);
+    width: 2px;
+    height: 13px;
+    background: #999;
+}
+
+/* footer */
+.footerContainer{
+    width: 100%;
+    height: 250px;
+    background: #ddd;
+    position: relative;
+    padding: 20px 0;
+}
+.fLogo{
+    width: 200px;
+    height: 30px;
+    float: left;
+    position: absolute;
+    top: -10px;
+}
+.fLogo a{
+    width: 163px;
+    height: 20px;
+}
+.fLogo a img{
+    width: 163px;
+    height: 20px;
+}
+
+.fMenu{
+    width: 1000px;
+    height: 30px;
+    float: right;
+    padding-left: 216px;
+}
+.fMenu li{
+    /* width: 20%; */
+    height: 100%;
+    float: left;
+}
+.fMenu li a{
+    display: block;
+    line-height: 30px;
+    text-align: center;
+    font-size: 14px;
+    color: #666;
+    padding: 0 20px;
+    position: relative;
+}
+.fMenu li:first-child a{
+    font-weight: bold;
+    color: #333;
+    padding-left: 0;
+}
+.fMenu li:last-child a{
+    padding-right: 0;
+}
+
+.fMenu li a::after{
+    content: "";
+    display: inline-block;
+    width: 1px;
+    height: 14px;
+    background: #666;
+    margin-left: 20px;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+}
+.fMenu li:last-child a::after{
+    display: none;
+}
+
+.adress{
+    width: 60%;
+    height: 180px;
+    padding-top: 50px;
+}
+.adress li{
+    width: 100%;
+    height: 20%;
+}
+.adress li p{
+    display: block;
+    font-size: 14px;
+    color: #666;
+}
+.adress li p span{
+    font-weight: bold;
+    color: #444;
+}
+
+.copy{
+    width: 60%;
+    height: 30px;
+}
+.copy p{
+    display: block;
+    line-height: 30px;
+    font-size: 14px;
+    color: #666;
+}
+
+.footerSelect{
+    position: absolute;
+    width: 150px;
+    height: 30px;
+    text-align: center;
+    top: 50px;
+    right: 52px;
+    border-radius: 10px;
+    border: solid 1px #999;
+    cursor: pointer;
+}
+.moveBtn{
+    position: absolute;
+    width: 50px;
+    height: 30px;
+    /* font-size: 16px; */
+    font-weight: bold;
+    line-height: 20px;
+    text-align: center;
+    top: 50px;
+    right: 0px;
+    border: solid 1px #999;
+    border-radius: 10px;
+    cursor: pointer;
+}

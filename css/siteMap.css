@@ -1,0 +1,414 @@
+@charset "UTF-8";
+
+/* reset */
+*{
+    padding: 0;
+    margin: 0;
+    color: #333;
+    font-family: '맑은 고딕','돋움';
+    box-sizing: border-box;
+}
+ul,li{
+    list-style: none;
+}
+a{
+    text-decoration: none;
+}
+
+.inner{
+    width: 1200px;
+    height: 100%;
+    margin: 0 auto;
+    position: relative;
+}
+.clearfix::after{
+    content: "";
+    display: block;
+    clear: both;
+}
+
+/* header */
+.headerContainer{
+    width: 100%;
+    height: 150px;
+}
+.hTop{
+    width: 100%;
+    height: 90px;
+    position: relative;
+    border-bottom: solid 1px #ddd;
+}
+.logo{
+    width: 212px;/*163px*/
+    height: 26px;/*20px*/
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+}
+.logo img{
+    position: absolute;
+    height: 100%;
+}
+
+.search{
+    width: 500px;
+    height: 50%; /*45px*/
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+.search > input:first-child{
+    width: 430px;
+    height: 90%;
+    border: solid 3px #2892d8;
+    border-radius: 20px;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    padding: 5px 15px;
+    font-size: 15px;
+}
+.search > div{
+    width: 66px;
+    height: 90%;
+    border: solid 1px #2892d8;
+    border-radius: 20px;
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    background: #2892d8;
+    font-size: 0;
+    /* background-image: url("../images/search.png") no-repeat center center/100%; */
+    cursor: pointer;
+}
+.search > div > img{
+    width: 38%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+
+.icon{
+    width: 70px;
+    height: 35px;
+    position: absolute;
+    top: 57%;
+    transform: translateY(-50%);
+    right: 22.5%;
+}
+.icon > a:first-child{
+    width: 50%;
+    height: 35px;
+    display: inline;
+    /* line-height: 35px; */
+    float: left;
+}
+.icon > a:first-child > img{
+    width: 100%;
+}
+.icon > a:last-child{
+    width: 50%;
+    height: 35px;
+    display: inline;
+    float: left;
+}
+.icon > a:last-child > img{
+    width: 80%;
+    margin-top: 3px;
+    margin-left: 3px;
+}
+
+.slogan{
+    width: 161px;/*316px*//*161px*/
+    height: 80%;/*56%*//*80%*/
+    position: absolute;
+    top: 50%;
+    right: 0;
+    transform: translateY(-50%);
+}
+.slogan img{
+    height: 100%;
+}
+
+.hBottom{
+    width: 100%;
+    height: 60px;
+    position: relative;
+    border-bottom: solid 1px #46679d;
+    z-index: 5;
+}
+
+.gnb{
+    width: 95%;
+    height: 100%;/*330px*//*420px*/
+    position: absolute;
+}
+.mainMenu{
+    width: 100%;
+    height: 100%;
+}
+.mainMenu > li{
+    width: 14%;
+    height: 100%;
+    float: left;
+    position: relative;
+}
+.mainMenu > li > a{
+    display: block;
+    line-height: 60px;
+    text-align: center;
+    font-size: 18px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+.mainMenu > li:hover > a{
+    color: #2892d8;
+}
+
+.subMenu{
+    width: 100%;
+    height: 360px;
+    position: absolute;
+}
+.subMenu > li{
+    width: 100%;
+    height: 11%;
+}
+.subMenu > li > a{
+    display: block;
+    line-height: 40px;
+    text-align: center;
+    font-size: 14px;
+    transition: 0.3s;
+    font-weight: bold;
+}
+.subMenu > li:hover > a{
+    /* color: #2892d8; */
+    color: #fff;
+}
+
+.siteMap{
+    width: 5%;
+    height: 100%;
+    position: absolute;
+    right: 0;
+}
+.siteMapBtn{
+    width: 100%;
+    height: 100%;
+}
+.siteMapBtn > img{
+    width: 45%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+
+.gnbBg{
+    width: 100%;
+    height: 400px;
+    background: #71bff3; /*eee*/
+}
+
+/* siteMapList */
+.siteMapList{
+    width: 100%;
+    height: 800px; /*100%*/
+}
+
+.mapMainMenu{
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+
+.mapMainMenu > a{
+    position: absolute;
+    width: 25px;
+    height: 25px;
+    left: 16px;
+}
+.mapMainMenu > a > img{
+    width: 25px;
+}
+.mapMainMenu > h2{
+    width: 110px;
+    height: 25px;
+    font-size: 18px;
+    margin-top: 30px;
+    margin-left: 52px;
+}
+
+.mapMainMenu > li{
+    width: 22%;
+    height: 337.5px;
+    float: left;
+    margin-right: 4%;
+    margin-top: 40px;
+}
+.mapMainMenu > li:nth-child(6){
+    margin-right: 0;
+}
+.mapMainMenu > li > a{
+    display: block;
+    line-height: 50px;
+    font-weight: bold;
+    border: solid 1px #2385c7;
+    background: #2892d881;
+    text-align: center;
+    font-size: 18px;
+}
+.mapMainMenu > li:hover > a{
+    color: #fff;
+}
+
+.mapSubMenu{
+    width: 100%;
+    height: 287.5px;
+    border: solid 1px #999;
+    border-top: none;
+    border-bottom-left-radius: 30px;
+}
+.mapSubMenu > li{
+    width: 100%;
+    height: 11.1%;
+}
+.mapSubMenu > li > a{
+    display: block;
+    line-height: 31.5px;
+    text-align: center;
+    transition: 0.3s;
+}
+.mapSubMenu > li:hover > a{
+    color: #2385c7;
+    font-weight: bold;
+}
+
+/* footer */
+.footerContainer{
+    width: 100%;
+    height: 250px;
+    background: #ddd;
+    position: relative;
+    padding: 20px 0;
+}
+.fLogo{
+    width: 200px;
+    height: 30px;
+    float: left;
+    position: absolute;
+    top: -10px;
+}
+.fLogo a{
+    width: 163px;
+    height: 20px;
+}
+.fLogo a img{
+    width: 163px;
+    height: 20px;
+}
+
+.fMenu{
+    width: 1000px;
+    height: 30px;
+    float: right;
+    padding-left: 216px;
+}
+.fMenu li{
+    /* width: 20%; */
+    height: 100%;
+    float: left;
+}
+.fMenu li a{
+    display: block;
+    line-height: 30px;
+    text-align: center;
+    font-size: 14px;
+    color: #666;
+    padding: 0 20px;
+    position: relative;
+}
+.fMenu li:first-child a{
+    font-weight: bold;
+    color: #333;
+    padding-left: 0;
+}
+.fMenu li:last-child a{
+    padding-right: 0;
+}
+
+.fMenu li a::after{
+    content: "";
+    display: inline-block;
+    width: 1px;
+    height: 14px;
+    background: #666;
+    margin-left: 20px;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+}
+.fMenu li:last-child a::after{
+    display: none;
+}
+
+.adress{
+    width: 60%;
+    height: 180px;
+    padding-top: 50px;
+}
+.adress li{
+    width: 100%;
+    height: 20%;
+}
+.adress li p{
+    display: block;
+    font-size: 14px;
+    color: #666;
+}
+.adress li p span{
+    font-weight: bold;
+    color: #444;
+}
+
+.copy{
+    width: 60%;
+    height: 30px;
+}
+.copy p{
+    display: block;
+    line-height: 30px;
+    font-size: 14px;
+    color: #666;
+}
+
+.footerSelect{
+    position: absolute;
+    width: 150px;
+    height: 30px;
+    text-align: center;
+    top: 50px;
+    right: 52px;
+    border-radius: 10px;
+    border: solid 1px #999;
+    cursor: pointer;
+}
+.moveBtn{
+    position: absolute;
+    width: 50px;
+    height: 30px;
+    /* font-size: 16px; */
+    font-weight: bold;
+    line-height: 20px;
+    text-align: center;
+    top: 50px;
+    right: 0px;
+    border: solid 1px #999;
+    border-radius: 10px;
+    cursor: pointer;
+}
