@@ -1,0 +1,840 @@
+@charset "UTF-8";
+
+/* reset */
+*{
+    padding: 0;
+    margin: 0;
+    color: #333;
+    font-family: '맑은 고딕','돋움';
+    box-sizing: border-box;
+}
+ul,li{
+    list-style: none;
+}
+a{
+    text-decoration: none;
+}
+
+.inner{
+    width: 1200px;
+    height: 100%;
+    margin: 0 auto;
+    position: relative;
+}
+.clearfix::after{
+    content: "";
+    display: block;
+    clear: both;
+}
+
+/* header */
+.headerContainer{
+    width: 100%;
+    height: 150px;
+}
+.hTop{
+    width: 100%;
+    height: 90px;
+    position: relative;
+    border-bottom: solid 1px #ddd;
+}
+.logo{
+    width: 212px;/*163px*/
+    height: 26px;/*20px*/
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+}
+.logo img{
+    position: absolute;
+    height: 100%;
+}
+
+.search{
+    width: 500px;
+    height: 50%; /*45px*/
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+.search > input:first-child{
+    width: 430px;
+    height: 90%;
+    border: solid 3px #2892d8;
+    border-radius: 20px;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    padding: 5px 15px;
+    font-size: 15px;
+}
+.search > a{
+    width: 66px;
+    height: 90%;
+    border: solid 1px #2892d8;
+    border-radius: 20px;
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    background: #2892d8;
+    font-size: 0;
+    /* background-image: url("../images/search.png") no-repeat center center/100%; */
+    cursor: pointer;
+}
+.search > a > img{
+    width: 38%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+
+.icon{
+    width: 70px;
+    height: 35px;
+    position: absolute;
+    top: 57%;
+    transform: translateY(-50%);
+    right: 22.5%;
+}
+.icon > a:first-child{
+    width: 50%;
+    height: 35px;
+    display: inline;
+    /* line-height: 35px; */
+    float: left;
+}
+.icon > a:first-child > img{
+    width: 100%;
+}
+.icon > a:last-child{
+    width: 50%;
+    height: 35px;
+    display: inline;
+    float: left;
+}
+.icon > a:last-child > img{
+    width: 80%;
+    margin-top: 3px;
+    margin-left: 3px;
+}
+
+.slogan{
+    width: 161px;/*316px*//*161px*/
+    height: 80%;/*56%*//*80%*/
+    position: absolute;
+    top: 50%;
+    right: 0;
+    transform: translateY(-50%);
+}
+.slogan img{
+    height: 100%;
+}
+
+.hBottom{
+    width: 100%;
+    height: 60px;
+    position: relative;
+    border-bottom: solid 1px #46679d;
+    z-index: 5;
+}
+
+.gnb{
+    width: 95%;
+    height: 100%;/*330px*//*420px*/
+    position: absolute;
+}
+.mainMenu{
+    width: 100%;
+    height: 100%;
+}
+.mainMenu > li{
+    width: 14%;
+    height: 100%;
+    float: left;
+    position: relative;
+}
+.mainMenu > li > a{
+    display: block;
+    line-height: 60px;
+    text-align: center;
+    font-size: 18px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+.mainMenu > li:hover > a{
+    color: #2892d8;
+}
+
+.subMenu{
+    width: 100%;
+    height: 360px;
+    position: absolute;
+}
+.subMenu > li{
+    width: 100%;
+    height: 11%;
+}
+.subMenu > li > a{
+    display: block;
+    line-height: 40px;
+    text-align: center;
+    font-size: 14px;
+    transition: 0.3s;
+    font-weight: bold;
+}
+.subMenu > li:hover > a{
+    /* color: #2892d8; */
+    color: #fff;
+}
+
+.siteMap{
+    width: 5%;
+    height: 100%;
+    position: absolute;
+    right: 0;
+}
+.siteMapBtn{
+    width: 100%;
+    height: 100%;
+}
+.siteMapBtn > img{
+    width: 45%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+
+.gnbBg{
+    width: 100%;
+    height: 400px;
+    background: #71bff3; /*eee*/
+}
+
+/* slide */
+.slideContainer{
+    width: 100%;
+    height: 500px;
+    position: relative;
+    overflow: hidden;
+}
+.slideList{
+    width: 3600px;
+    height: 100%;
+    position: absolute;
+}
+.slideList > li{
+    width: 1200px;
+    height: 100%;
+    float: left;
+}
+
+.slideContainer button{
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 30px;
+    height: 30px;
+    border: none;
+    background-image: transparent;
+    z-index: 3;
+    cursor: pointer;
+}
+.prevBtn{
+    left: 0;
+    background: url("../images/prevBtn.png") no-repeat center center/100%;
+    opacity: 60%;
+}
+.nextBtn{
+    right: 0;
+    background: url("../images/nextBtn.png") no-repeat center center/100%;
+    opacity: 60%;
+}
+
+/* contents */
+.contentsContainer{
+    width: 100%;
+    height: 1000px;
+    /* background: #eee; */
+}
+
+/* contents01 */
+.contents01{
+    width: 100%;
+    height: 300px;
+}
+.iconMenu{
+    width: 68%;
+    height: 100%;
+    padding: 20px;
+    float: left;
+    background: #2892d8;
+}
+.iconMenu > li{
+    width: 25%;
+    height: 50%;
+    float: left;
+    text-align: center;
+}
+
+.iconMenu > li > a > div{
+    width: 80px;
+    height: 80px;
+    border: solid 1px #eee;
+    border-radius: 50px;
+    background: #fff;
+    margin: 0 auto;
+}
+.iconMenu > li > a > div > img{
+    width: 65%;
+    margin-top: 15px;
+}
+.iconMenu > li:nth-child(7) > a > div > img{
+    margin-left: 10px;
+}
+.iconMenu > li > a > p{
+    font-weight: bold;
+    font-size: 14px;
+    margin-top: 10px;
+    color: #fff;
+}
+
+.date{
+    width: 32%;
+    height: 100%;
+    padding: 20px;
+    float: left;
+    /* border: solid 1px #aaa; */
+    border-left: none;
+    background: #57c2d39a;
+    position: relative;
+}
+.date h2{
+    font-size: 16px;
+    padding-bottom: 20px;
+    margin-bottom: 20px;
+    border-bottom: solid 1px #aaa;
+    /* text-align: center; */
+    /* float: left; */
+}
+.date > p{
+    position: absolute;
+    top: 5px;
+    right: 26px;
+    font-size: 36px;
+    font-weight: bold;
+    /* padding-left: 50px; */
+    /* text-align: center; */
+}
+.date > p > span{
+    font-weight: 500;
+    font-size: 20px;
+}
+.date select{
+    position: absolute;
+    width: 60px;
+    height: 28px;
+    font-size: 14px;
+    /* font-weight: bold; */
+    text-align: center;
+    top: 16px;
+    left: 116px;
+}
+
+.month{
+    width: 100%;
+    height: 20px;
+}
+.month li{
+    width: 14%;
+    height: 100%;
+    float: left;
+    text-align: center;
+}
+.month li p{
+    font-family: '돋움';
+    font-weight: bold;
+    font-size: 14px;
+}
+.date ul:last-child{
+    width: 100%;
+    height: 165px;
+    margin-top: 12px;
+}
+.date ul:last-child li{
+    width: 14%;
+    height: 16.7%;
+    float: left;
+    text-align: center;
+}
+.date ul:last-child li p{
+    display: block;
+}
+.date ul:last-child li:nth-child(9) p{
+    color: red;
+    font-weight: bold;
+}.date ul:last-child li:nth-child(15) p{
+    color: red;
+    font-weight: bold;
+}.date ul:last-child li:nth-child(16) p{
+    color: red;
+    font-weight: bold;
+}.date ul:last-child li:nth-child(23) p{
+    color: red;
+    font-weight: bold;
+}.date ul:last-child li:nth-child(30) p{
+    color: red;
+    font-weight: bold;
+}.date ul:last-child li:nth-child(37) p{
+    color: red;
+    font-weight: bold;
+}
+
+
+/* contents02 */
+.contents02{
+    width: 100%;
+    height: 300px;
+    padding: 10px 0px;
+}
+
+.notice{
+    width: 50%;
+    height: 100%;
+    float: left;
+    position: relative;
+}
+.notice > li{
+    width: 100%;
+    height: 100%;
+}
+.notice > li > a{
+    height: 34px;
+    display: block;
+    float: left;
+    /* border: solid 1px #666; */
+    /* border-bottom: none; */
+    /* padding: 5px 10px; */
+    margin-left: 10px;
+    font-size: 22px;
+    font-weight: bold;
+    line-height: 45px;
+}
+
+.noticeList{
+    width: 98%;
+    height: 220px;
+    position: absolute;
+    top: 48px;
+    border: solid 1px skyblue;
+    border-bottom-left-radius: 40px;
+    /* border-top: none; */
+    padding: 5px 25px;
+}
+.noticeList > li{
+    width: 100%;
+    height: 20%;
+    /* border-bottom: solid 1px #999; */
+}
+.noticeList > li > a{
+    display: block;
+    line-height: 40px;
+}
+.noticeList > li > a > span{
+    float: right;
+    font-size: 14px;
+    color: #999;
+}
+
+.board{
+    width: 50%;
+    height: 100%;
+    float: left;
+}
+.tabMenu{
+    height: 34px;
+    margin-top: 12px;
+}
+.tabMenu li{
+    height: 100%;
+    display: block;
+    float: left;
+    padding: 0px 10px;
+}
+.tabMenu li a{
+    line-height: 26px;
+    font-weight: bold;
+    position: relative;
+    font-size: 18px;
+}
+/* .tabMenu li:first-child a{
+    margin-left: 10px;
+} */
+.tabMenu li:first-child a::after{
+    content: "";
+    display: inline-block;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 3px;
+    height: 15px;
+    background: #bbb;
+    margin-left: 10px;
+}
+
+.tabList{
+    width: 100%;
+    height: 220px;
+    position: relative;
+    border: solid 1px skyblue;
+}
+
+.hopeBooks{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+}
+.hopeBooks li{
+    width: 100%;
+    height: 100%;
+}
+
+.rental{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+}
+.rental li{
+    width: 100%;
+    height: 100%;
+}
+
+/* contents 03 */
+.contents03{
+    width: 100%;
+    height: 400px;
+    position: relative;
+    /* background: pink; */
+}
+.contents03Tit{
+    font-size: 22px;
+    margin-left: 10px;
+    line-height: 40px;
+    margin-bottom: 10px;
+}
+
+.bookTabMenu{
+    height: 30px;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+}
+.bookTabMenu li{
+    height: 100%;
+    display: block;
+    float: left;
+}
+.bookTabMenu li a{
+    display: block;
+    font-size: 18px;
+    font-weight: bold;
+    padding: 0px 15px;
+    line-height: 30px;
+    position: relative;
+    color: #454545;
+}
+.bookTabMenu li:first-child a::after{
+    content: "";
+    display: inline-block;
+    width: 2px;
+    height: 18px;
+    background: #666;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    margin-left: 15px;
+}
+
+.bookTabList{
+    width: 100%;
+    height: 320px;
+    margin-top: 40px;
+    overflow: hidden;
+    position: relative;
+}
+
+.adult{
+    width: 2000px;
+    height: 100%;
+    position: absolute;
+}
+.adult > li{
+    width: 20%;
+    height: 100%;
+    float: left;
+    padding: 10px 50px;
+}
+.adult > li > a{
+    width: 100%;
+    height: 100%;
+}
+.adult > li > a > img{
+    display: block;
+    margin: 0 auto;
+    height: 190px;
+    margin-top: 10px;
+}
+.adult > li > a > span:nth-child(2){
+    display: block;
+    line-height: 30px;
+    text-align: center;
+    font-size: 18px;
+    font-weight: bold;
+    color: #434343;
+    margin-top: 15px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+.adult > li > a > span:last-child{
+    display: block;
+    line-height: 22px;
+    text-align: center;
+    font-size: 14px;
+    font-weight: bold;
+    color: #666;
+}
+
+/* .adult > li:first-child > a > img{
+    height: 200px;
+} */
+
+.children{
+    width: 2000px;
+    height: 100%;
+    position: absolute;
+}
+.children > li{
+    width: 20%;
+    height: 100%;
+    float: left;
+    padding: 10px 50px;
+}
+.children > li > a{
+    width: 100%;
+    height: 100%;
+}
+.children > li > a > img{
+    display: block;
+    margin: 0 auto;
+    height: 190px;
+    margin-top: 10px;
+}
+.children > li > a > span:nth-child(2){
+    display: block;
+    line-height: 30px;
+    text-align: center;
+    font-size: 18px;
+    font-weight: bold;
+    color: #434343;
+    margin-top: 15px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+.children > li > a > span:last-child{
+    display: block;
+    line-height: 22px;
+    text-align: center;
+    font-size: 14px;
+    font-weight: bold;
+    color: #666;
+}
+
+.bookTabList button{
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    border: none;
+    background-image: transparent;
+    cursor: pointer;
+}
+.bookPrevBtn{
+    left: 0;
+    background: url("../images/bookPrevBtn.png") no-repeat center center/100%;
+}
+.bookNextBtn{
+    right: 0;
+    background: url("../images/bookNextBtn.png") no-repeat center center/100%;
+}
+
+/* footer */
+.footerContainer{
+    width: 100%;
+    height: 250px;
+    background: #ddd;
+    position: relative;
+    padding: 20px 0;
+}
+.fLogo{
+    width: 200px;
+    height: 30px;
+    float: left;
+    position: absolute;
+    top: -10px;
+}
+.fLogo a{
+    width: 163px;
+    height: 20px;
+}
+.fLogo a img{
+    width: 163px;
+    height: 20px;
+}
+
+.fMenu{
+    width: 1000px;
+    height: 30px;
+    float: right;
+    padding-left: 216px;
+}
+.fMenu li{
+    /* width: 20%; */
+    height: 100%;
+    float: left;
+}
+.fMenu li a{
+    display: block;
+    line-height: 30px;
+    text-align: center;
+    font-size: 14px;
+    color: #666;
+    padding: 0 20px;
+    position: relative;
+}
+.fMenu li:first-child a{
+    font-weight: bold;
+    color: #333;
+    padding-left: 0;
+}
+.fMenu li:last-child a{
+    padding-right: 0;
+}
+
+.fMenu li a::after{
+    content: "";
+    display: inline-block;
+    width: 1px;
+    height: 14px;
+    background: #666;
+    margin-left: 20px;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+}
+.fMenu li:last-child a::after{
+    display: none;
+}
+
+.adress{
+    width: 60%;
+    height: 180px;
+    padding-top: 50px;
+}
+.adress li{
+    width: 100%;
+    height: 20%;
+}
+.adress li p{
+    display: block;
+    font-size: 14px;
+    color: #666;
+}
+.adress li p span{
+    font-weight: bold;
+    color: #444;
+}
+
+.copy{
+    width: 60%;
+    height: 30px;
+}
+.copy p{
+    display: block;
+    line-height: 30px;
+    font-size: 14px;
+    color: #666;
+}
+
+.footerSelect{
+    position: absolute;
+    width: 150px;
+    height: 30px;
+    text-align: center;
+    top: 50px;
+    right: 52px;
+    border-radius: 10px;
+    border: solid 1px #999;
+    cursor: pointer;
+}
+.moveBtn{
+    position: absolute;
+    width: 50px;
+    height: 30px;
+    /* font-size: 16px; */
+    font-weight: bold;
+    line-height: 20px;
+    text-align: center;
+    top: 50px;
+    right: 0px;
+    border: solid 1px #999;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+/* popUp */
+.popUpContainer{
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.7);
+    position: fixed;
+    z-index: 999;
+}
+.popUp{
+    width: 350px;
+    height: 150px;
+    background: #ddd;
+    position: absolute;
+    top: 30%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    padding: 30px;
+    border: solid 3px #999;
+}
+.popUp p{
+    display: block;
+    font-weight: bold;
+    font-size: 20px;
+    text-align: center;
+    padding-top: 5px;
+    color: #222;
+}
+.closeBtn{
+    position: absolute;
+    width: 70px;
+    height: 35px;
+    background: #2892d8b9;
+    border-radius: 6px;
+    bottom: 25px;
+    right: 30px;
+    text-align: center;
+    line-height: 34px;
+    font-size: 14px;
+    font-weight: bold;
+}
